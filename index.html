@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Healing F# withdrawal with C# - inficon pro 2019</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Healing F# withdrawal with C#</h2>
+				<small>Mendel Agterberg - InfiCon Pro 2019</small>
+				<aside class="notes">
+					Learned F#, was fun, some bit of feature-envy.
+					Some things i can do without, others i really miss. So i started looking how I can Apply it to c#
+				</aside>
+			</section>
+			<section>
+				<h2>F# features in C#</h2>
+				<table style="font-size: 60%">
+					<tr>
+						<th>F# Feature</th>
+						<th>C# Implementation</th>
+					</tr>
+					<tr>
+						<td>Functional First</td>
+						<td>OO First</td>
+					</tr>
+					<tr>
+						<td>Higher-order functions</td>
+						<td>C#, Funcs and Actions</td>
+					</tr>
+					<tr>
+						<td>Value types</td>
+						<td>ValueOf</td>
+					</tr>
+					<tr>
+						<td>Discriminated Unions</td>
+						<td>OneOf</td>
+					</tr>
+					<tr>
+						<td>Pattern Matching</td>
+						<td>OneOf/Language-ext</td>
+					</tr>
+					<tr>
+						<td>Currying/Partial Application</td>
+						<td>Language-ext</td>
+					</tr>
+					<tr>
+						<td>Immutability</td>
+						<td>Language-ext, collections, records</td>
+					</tr>
+					<tr>
+						<td>Expressions</td>
+						<td>Language-ext</td>
+					</tr>
+					<tr>
+						<td>REPL</td>
+						<td>-</td>
+					</tr>
+				</table>
+				<aside class="notes">
+					So looking at this table, just the tip of the iceberg of feature. Not everything is great in c#.
+					Basicly 2 options, use a library like language ext/oneOf or valueOf/ implement it a bit hacky
+					yourself in C#.
+				</aside>
+			</section>
+			<section>
+				<h2>F# features in C#</h2>
+				<table style="font-size: 60%">
+					<tr>
+						<th>F# Feature</th>
+						<th>C# Implementation</th>
+					</tr>
+					<tr>
+						<td>Functional First</td>
+						<td>OO First</td>
+					</tr>
+					<tr>
+						<td>Higher-order functions</td>
+						<td>C#, Funcs and Actions</td>
+					</tr>
+					<tr style="color: orangered">
+						<td>Value types</td>
+						<td>ValueOf</td>
+					</tr>
+					<tr style="color: orangered">
+						<td>Discriminated Unions</td>
+						<td>OneOf</td>
+					</tr>
+					<tr>
+						<td>Pattern Matching</td>
+						<td>OneOf/Language-ext</td>
+					</tr>
+					<tr>
+						<td>Currying/Partial Application</td>
+						<td>Language-ext</td>
+					</tr>
+					<tr>
+						<td>Immutability</td>
+						<td>Language-ext, collections, records</td>
+					</tr>
+					<tr>
+						<td>Expressions</td>
+						<td>Language-ext</td>
+					</tr>
+					<tr>
+						<td>REPL</td>
+						<td>-</td>
+					</tr>
+				</table>
+				<aside class="notes">
+					I'm going to talk about 2 features, a solution to the Primitve obsession. with valueOf and
+					a Enum on speed called Discriminated Union in OneOf.
+				</aside>
+			</section>
+			<section>
+				<h2>Solution for primitive types</h2>
+				<ul>
+					<li>Wrapping primitive types</li>
+					<li>More explicit</li>
+					<li>Less error prone</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Discriminated Unions</h2>
+				<ul>
+					<li>Domain modeling</li>
+					<li>Makes branching more explicit</li>
+				</ul>
+			</section>
+			<section>
+				<h2>More on Discriminated Unions</h2>
+				<ul>
+					<li>Domain modeling</li>
+					<li>Makes branching more explicit</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Recap</h2>
+				<ul>
+					<li>Learn, apply</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Questions?</h2>
+				<p>Extra sources</p>
+				<ul>
+					<li><a href="https://github.com/mcintyre321/OneOf">OneOf</li>
+					<li><a href="https://github.com/mcintyre321/ValueOf">ValueOf</li>
+					<li><a href="https://github.com/louthy/language-ext">Language-ext</li>
+					<li><a href="https://pragprog.com/book/swdddf/domain-modeling-made-functional">Domain modeling made
+							functional - Scott Wlaschin</li>
+					<li><a href="https://pragprog.com/book/swdddf/domain-modeling-made-functional">Applying Functional
+							Principles in C# - Vladimir Khorikov</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>
